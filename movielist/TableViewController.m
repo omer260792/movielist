@@ -7,44 +7,67 @@
 //
 
 #import "TableViewController.h"
+#import "TableViewCell.h"
+#import "AppDelegate.h"
+#import "UIImageView+WebCache.h"
+#import "SDImageCache.h"
+#import "PreViewController.h"
 
-@interface TableViewController ()
+@interface TableViewController (){
+    AppDelegate *appDelegateTable;
+    NSManagedObjectContext *contextTable;
+}
 
 @end
+
+UIImageView *imageView;
+NSString *image;
+NSArray *moviesJSONN;
 
 @implementation TableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //get context
+    appDelegateTable = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    contextTable = appDelegateTable.persistentContainer.viewContext;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Data"];
+    moviesJSONN = [[contextTable executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    
+    [self.tableView reloadData];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [moviesJSONN count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"customCell" forIndexPath:indexPath];
+    
+    
+    cell.textLabel.text = moviesJSONN.description;
+    
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -89,5 +112,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"UpdateDevice"])
+    {
+        NSManagedObject *selectedDevice = [moviesJSONN objectAtIndex:[[self.tableView indexPathForSelectedRow]row]];
+        PreViewController *destViewController = segue.destinationViewController;
+        NSLog(selectedDevice.description);
+        
+        destViewController.device = selectedDevice;
+    }
+}
+
 
 @end

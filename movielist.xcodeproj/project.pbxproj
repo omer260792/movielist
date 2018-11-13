@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		172AB6582198266900105BB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 172AB6572198266900105BB1 /* AppDelegate.m */; };
 		172AB65B2198266900105BB1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 172AB65A2198266900105BB1 /* ViewController.m */; };
-		172AB65E2198266900105BB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172AB65C2198266900105BB1 /* Main.storyboard */; };
 		172AB6612198266900105BB1 /* movielist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 172AB65F2198266900105BB1 /* movielist.xcdatamodeld */; };
 		172AB6632198266900105BB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172AB6622198266900105BB1 /* Assets.xcassets */; };
 		172AB6662198266900105BB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172AB6642198266900105BB1 /* LaunchScreen.storyboard */; };
 		172AB6692198266900105BB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 172AB6682198266900105BB1 /* main.m */; };
+		172AB6772198363400105BB1 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 172AB6762198363400105BB1 /* TableViewCell.m */; };
+		172AB67A2198364200105BB1 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 172AB6792198364200105BB1 /* TableViewController.m */; };
+		172AB67D2198365C00105BB1 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 172AB67C2198365C00105BB1 /* AddViewController.m */; };
+		172AB6812198448500105BB1 /* PreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 172AB6802198448500105BB1 /* PreViewController.m */; };
+		172AB6822198530900105BB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172AB65C2198266900105BB1 /* Main.storyboard */; };
+		CD9C91F1BF6E8BE4E72EB5E1 /* libPods-movielist.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DE310923E41B02D206C97B /* libPods-movielist.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,17 @@
 		172AB6652198266900105BB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		172AB6672198266900105BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		172AB6682198266900105BB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		172AB6752198363400105BB1 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		172AB6762198363400105BB1 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		172AB6782198364200105BB1 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		172AB6792198364200105BB1 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		172AB67B2198365C00105BB1 /* AddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		172AB67C2198365C00105BB1 /* AddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		172AB67F2198448500105BB1 /* PreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PreViewController.h; sourceTree = "<group>"; };
+		172AB6802198448500105BB1 /* PreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PreViewController.m; sourceTree = "<group>"; };
+		5206CC26EF31B28F373867AB /* Pods-movielist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movielist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-movielist/Pods-movielist.debug.xcconfig"; sourceTree = "<group>"; };
+		57DE310923E41B02D206C97B /* libPods-movielist.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-movielist.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E7EAF6689F447A259F72351 /* Pods-movielist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movielist.release.xcconfig"; path = "Pods/Target Support Files/Pods-movielist/Pods-movielist.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9C91F1BF6E8BE4E72EB5E1 /* libPods-movielist.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +63,8 @@
 			children = (
 				172AB6552198266900105BB1 /* movielist */,
 				172AB6542198266900105BB1 /* Products */,
+				31AEA799CEB43A92F5F3DB04 /* Pods */,
+				673A557918F5FFF34216DDD6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,8 +89,33 @@
 				172AB6672198266900105BB1 /* Info.plist */,
 				172AB6682198266900105BB1 /* main.m */,
 				172AB65F2198266900105BB1 /* movielist.xcdatamodeld */,
+				172AB6752198363400105BB1 /* TableViewCell.h */,
+				172AB6762198363400105BB1 /* TableViewCell.m */,
+				172AB6782198364200105BB1 /* TableViewController.h */,
+				172AB6792198364200105BB1 /* TableViewController.m */,
+				172AB67B2198365C00105BB1 /* AddViewController.h */,
+				172AB67C2198365C00105BB1 /* AddViewController.m */,
+				172AB67F2198448500105BB1 /* PreViewController.h */,
+				172AB6802198448500105BB1 /* PreViewController.m */,
 			);
 			path = movielist;
+			sourceTree = "<group>";
+		};
+		31AEA799CEB43A92F5F3DB04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5206CC26EF31B28F373867AB /* Pods-movielist.debug.xcconfig */,
+				5E7EAF6689F447A259F72351 /* Pods-movielist.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		673A557918F5FFF34216DDD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57DE310923E41B02D206C97B /* libPods-movielist.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,6 +125,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 172AB66C2198266900105BB1 /* Build configuration list for PBXNativeTarget "movielist" */;
 			buildPhases = (
+				61B79221284D0F2A940F3241 /* [CP] Check Pods Manifest.lock */,
 				172AB64F2198266900105BB1 /* Sources */,
 				172AB6502198266900105BB1 /* Frameworks */,
 				172AB6512198266900105BB1 /* Resources */,
@@ -131,13 +176,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172AB6822198530900105BB1 /* Main.storyboard in Resources */,
 				172AB6662198266900105BB1 /* LaunchScreen.storyboard in Resources */,
 				172AB6632198266900105BB1 /* Assets.xcassets in Resources */,
-				172AB65E2198266900105BB1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61B79221284D0F2A940F3241 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-movielist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		172AB64F2198266900105BB1 /* Sources */ = {
@@ -145,8 +215,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				172AB65B2198266900105BB1 /* ViewController.m in Sources */,
+				172AB67A2198364200105BB1 /* TableViewController.m in Sources */,
 				172AB6582198266900105BB1 /* AppDelegate.m in Sources */,
+				172AB67D2198365C00105BB1 /* AddViewController.m in Sources */,
+				172AB6812198448500105BB1 /* PreViewController.m in Sources */,
 				172AB6692198266900105BB1 /* main.m in Sources */,
+				172AB6772198363400105BB1 /* TableViewCell.m in Sources */,
 				172AB6612198266900105BB1 /* movielist.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,10 +361,11 @@
 		};
 		172AB66D2198266900105BB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5206CC26EF31B28F373867AB /* Pods-movielist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4634N6FE7C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = movielist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,10 +379,11 @@
 		};
 		172AB66E2198266900105BB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E7EAF6689F447A259F72351 /* Pods-movielist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4634N6FE7C;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = movielist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

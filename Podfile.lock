@@ -1,0 +1,23 @@
+PODS:
+  - SDWebImage (3.7.1):
+    - SDWebImage/Core (= 3.7.1)
+  - SDWebImage/Core (3.7.1)
+  - UIActivityIndicator-for-SDWebImage (1.2):
+    - SDWebImage (~> 3.7)
+
+DEPENDENCIES:
+  - SDWebImage (= 3.7.1)
+  - UIActivityIndicator-for-SDWebImage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SDWebImage
+    - UIActivityIndicator-for-SDWebImage
+
+SPEC CHECKSUMS:
+  SDWebImage: ed3095af2ff88b436426037444979b917f6c5575
+  UIActivityIndicator-for-SDWebImage: 7bf7ebbf0ed1747dedc0d6e949c4603a6d0f9e0c
+
+PODFILE CHECKSUM: 4d0fd35ff7e24bda7dd3c4cb27b5f6b3499466e6
+
+COCOAPODS: 1.5.3

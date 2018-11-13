@@ -10,6 +10,8 @@
 
 @implementation TableViewCell
 
+@synthesize imageCell = _imageCell;
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

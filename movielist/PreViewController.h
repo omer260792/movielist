@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PreViewController : UIViewController
+@property (strong) NSObject *device;
 
 @end
 
